@@ -4,9 +4,9 @@
 #### Permission
 
 - IOS
-    - [ ] Http
+    - [X] Http
     - [ ] Camera
     - [ ] Photo Library
 - Android
-    - [ ] Internet
-    - [ ] Http
+    - [X] Internet
+    - [X] Http
