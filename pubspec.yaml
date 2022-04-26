@@ -16,6 +16,8 @@ dependencies:
 
   bloc: ^8.0.3
 
+  freezed_annotation: ^2.0.1
+
   flutter_cached_pdfview: ^0.4.1 # PDF Reader
   clay_containers: ^0.3.2 # For Clay Button
   youtube_player_flutter: ^8.0.0 # Youtube Player
@@ -33,6 +35,12 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^1.0.0
+
+  # flutter pub run build_runner watch --delete-conflicting-outputs
+  freezed: ^2.0.2
+  build_runner:
+  # .g.dart dependency
+  json_serializable:
 
   # https://pub.dev/packages/flutter_launcher_icons
 
