@@ -10,6 +10,9 @@ const double kAppBarHeight = 56;
 /// 공통 가로 패딩
 const double kHorizontalPadding = 20;
 
+/// 공통 세로 패딩
+const double kVerticalPadding = 20;
+
 /// empty height
 Widget eHeight(double height) => SizedBox(height: height);
 

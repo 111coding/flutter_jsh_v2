@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_jsh_v2/app/ui/page/exam_sample/exam_sample_page.dart';
 import 'package:flutter_jsh_v2/app/ui/page/home/home_page.dart';
+import 'package:flutter_jsh_v2/app/ui/page/lecture_schedule/lecture_schedule_page.dart';
 import 'package:flutter_jsh_v2/app/ui/page/report/report_page.dart';
+import 'package:flutter_jsh_v2/app/ui/page/video_sample/video_sample_page.dart';
 
 enum Routes {
   home,
@@ -24,12 +27,10 @@ const routesPath = {
 
 final pages = {
   Routes.home.path: (context) => const HomePage(),
-  Routes.lectureSchedule.path: (context) => HomePage(),
+  Routes.lectureSchedule.path: (context) => const LectureSchedulePage(),
   Routes.report.path: (context) => const ReportPage(),
-  Routes.examSample.path: (context) => HomePage(),
-  Routes.videoSample.path: (context) => HomePage(),
-  Routes.qna.path: (context) => HomePage(),
-  Routes.scanner.path: (context) => HomePage(),
+  Routes.examSample.path: (context) => const ExamSamplePage(),
+  Routes.videoSample.path: (context) => const VideoSamplePage(),
 };
 
 extension RoutesExtension on Routes {

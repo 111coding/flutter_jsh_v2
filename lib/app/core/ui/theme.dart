@@ -8,7 +8,7 @@ import 'package:flutter_jsh_v2/app/core/ui/core_ui.dart';
 ThemeData theme() {
   return ThemeData(
     primaryColor: ColorPalette.appMain,
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: ColorPalette.bgColor,
     fontFamily: kDefaultFontFamily,
     appBarTheme: appBarTheme(),
     textTheme: textTheme(),
