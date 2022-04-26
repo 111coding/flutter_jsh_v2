@@ -14,11 +14,14 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
+  bloc: ^8.0.3
+
   flutter_cached_pdfview: ^0.4.1 # PDF Reader
   clay_containers: ^0.3.2 # For Clay Button
   youtube_player_flutter: ^8.0.0 # Youtube Player
   url_launcher: ^6.1.0 # URL Launcher
   http: ^0.13.4 # http
+  flutter_inappwebview: ^5.4.2 # WebView
 
   # flutter_ios_document_scanner:
   #   git:
