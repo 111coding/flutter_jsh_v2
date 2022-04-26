@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_jsh_v2/app/ui/home/home_page.dart';
-import 'package:flutter_jsh_v2/app/ui/report/report_page.dart';
+import 'package:flutter_jsh_v2/app/ui/page/home/home_page.dart';
+import 'package:flutter_jsh_v2/app/ui/page/report/report_page.dart';
 
 enum Routes {
   home,

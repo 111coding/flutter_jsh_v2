@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'banner.dart';
+part of 'main_banner.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,35 +14,37 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Banner _$BannerFromJson(Map<String, dynamic> json) {
-  return _Banner.fromJson(json);
+MainBanner _$MainBannerFromJson(Map<String, dynamic> json) {
+  return _MainBanner.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Banner {
+mixin _$MainBanner {
   int get idx => throw _privateConstructorUsedError;
   String get imgUrl => throw _privateConstructorUsedError;
   String get href => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BannerCopyWith<Banner> get copyWith => throw _privateConstructorUsedError;
+  $MainBannerCopyWith<MainBanner> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $BannerCopyWith<$Res> {
-  factory $BannerCopyWith(Banner value, $Res Function(Banner) then) =
-      _$BannerCopyWithImpl<$Res>;
+abstract class $MainBannerCopyWith<$Res> {
+  factory $MainBannerCopyWith(
+          MainBanner value, $Res Function(MainBanner) then) =
+      _$MainBannerCopyWithImpl<$Res>;
   $Res call({int idx, String imgUrl, String href});
 }
 
 /// @nodoc
-class _$BannerCopyWithImpl<$Res> implements $BannerCopyWith<$Res> {
-  _$BannerCopyWithImpl(this._value, this._then);
+class _$MainBannerCopyWithImpl<$Res> implements $MainBannerCopyWith<$Res> {
+  _$MainBannerCopyWithImpl(this._value, this._then);
 
-  final Banner _value;
+  final MainBanner _value;
   // ignore: unused_field
-  final $Res Function(Banner) _then;
+  final $Res Function(MainBanner) _then;
 
   @override
   $Res call({
@@ -68,21 +70,23 @@ class _$BannerCopyWithImpl<$Res> implements $BannerCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$BannerCopyWith<$Res> implements $BannerCopyWith<$Res> {
-  factory _$BannerCopyWith(_Banner value, $Res Function(_Banner) then) =
-      __$BannerCopyWithImpl<$Res>;
+abstract class _$MainBannerCopyWith<$Res> implements $MainBannerCopyWith<$Res> {
+  factory _$MainBannerCopyWith(
+          _MainBanner value, $Res Function(_MainBanner) then) =
+      __$MainBannerCopyWithImpl<$Res>;
   @override
   $Res call({int idx, String imgUrl, String href});
 }
 
 /// @nodoc
-class __$BannerCopyWithImpl<$Res> extends _$BannerCopyWithImpl<$Res>
-    implements _$BannerCopyWith<$Res> {
-  __$BannerCopyWithImpl(_Banner _value, $Res Function(_Banner) _then)
-      : super(_value, (v) => _then(v as _Banner));
+class __$MainBannerCopyWithImpl<$Res> extends _$MainBannerCopyWithImpl<$Res>
+    implements _$MainBannerCopyWith<$Res> {
+  __$MainBannerCopyWithImpl(
+      _MainBanner _value, $Res Function(_MainBanner) _then)
+      : super(_value, (v) => _then(v as _MainBanner));
 
   @override
-  _Banner get _value => super._value as _Banner;
+  _MainBanner get _value => super._value as _MainBanner;
 
   @override
   $Res call({
@@ -90,7 +94,7 @@ class __$BannerCopyWithImpl<$Res> extends _$BannerCopyWithImpl<$Res>
     Object? imgUrl = freezed,
     Object? href = freezed,
   }) {
-    return _then(_Banner(
+    return _then(_MainBanner(
       idx: idx == freezed
           ? _value.idx
           : idx // ignore: cast_nullable_to_non_nullable
@@ -109,12 +113,12 @@ class __$BannerCopyWithImpl<$Res> extends _$BannerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Banner implements _Banner {
-  const _$_Banner(
+class _$_MainBanner implements _MainBanner {
+  const _$_MainBanner(
       {required this.idx, required this.imgUrl, required this.href});
 
-  factory _$_Banner.fromJson(Map<String, dynamic> json) =>
-      _$$_BannerFromJson(json);
+  factory _$_MainBanner.fromJson(Map<String, dynamic> json) =>
+      _$$_MainBannerFromJson(json);
 
   @override
   final int idx;
@@ -125,14 +129,14 @@ class _$_Banner implements _Banner {
 
   @override
   String toString() {
-    return 'Banner(idx: $idx, imgUrl: $imgUrl, href: $href)';
+    return 'MainBanner(idx: $idx, imgUrl: $imgUrl, href: $href)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Banner &&
+            other is _MainBanner &&
             const DeepCollectionEquality().equals(other.idx, idx) &&
             const DeepCollectionEquality().equals(other.imgUrl, imgUrl) &&
             const DeepCollectionEquality().equals(other.href, href));
@@ -148,22 +152,23 @@ class _$_Banner implements _Banner {
 
   @JsonKey(ignore: true)
   @override
-  _$BannerCopyWith<_Banner> get copyWith =>
-      __$BannerCopyWithImpl<_Banner>(this, _$identity);
+  _$MainBannerCopyWith<_MainBanner> get copyWith =>
+      __$MainBannerCopyWithImpl<_MainBanner>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BannerToJson(this);
+    return _$$_MainBannerToJson(this);
   }
 }
 
-abstract class _Banner implements Banner {
-  const factory _Banner(
+abstract class _MainBanner implements MainBanner {
+  const factory _MainBanner(
       {required final int idx,
       required final String imgUrl,
-      required final String href}) = _$_Banner;
+      required final String href}) = _$_MainBanner;
 
-  factory _Banner.fromJson(Map<String, dynamic> json) = _$_Banner.fromJson;
+  factory _MainBanner.fromJson(Map<String, dynamic> json) =
+      _$_MainBanner.fromJson;
 
   @override
   int get idx => throw _privateConstructorUsedError;
@@ -173,5 +178,6 @@ abstract class _Banner implements Banner {
   String get href => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BannerCopyWith<_Banner> get copyWith => throw _privateConstructorUsedError;
+  _$MainBannerCopyWith<_MainBanner> get copyWith =>
+      throw _privateConstructorUsedError;
 }
