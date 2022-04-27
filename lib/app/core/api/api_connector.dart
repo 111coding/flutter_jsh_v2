@@ -17,8 +17,11 @@ class ApiConnector {
       Uri.parse(requestUrl),
       headers: _defaultHeader,
     );
+
     if (response.statusCode == 200) {
-      return jsonDecode(response.body) as T;
+      final bytes = response.bodyBytes;
+      final str = utf8.decode(bytes);
+      return jsonDecode(str) as T;
     }
 
     return null;
