@@ -18,7 +18,7 @@ enum Routes {
 const routesPath = {
   Routes.home: "/banners",
   Routes.lectureSchedule: "/lectureSchedule",
-  Routes.report: "/",
+  Routes.report: "/report",
   Routes.examSample: "/examSamples",
   Routes.videoSample: "/videoSampless",
   Routes.qna: "/qna",
