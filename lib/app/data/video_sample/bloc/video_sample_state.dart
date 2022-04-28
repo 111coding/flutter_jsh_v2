@@ -1,0 +1,31 @@
+import 'package:equatable/equatable.dart';
+import 'package:flutter_jsh_v2/app/core/api/fetch_status.dart';
+import 'package:flutter_jsh_v2/app/data/video_sample/model/video_sample.dart';
+
+class VideoSampleState extends Equatable {
+  const VideoSampleState({
+    this.status = FetchStatus.initial,
+    this.videos = const <VideoSample>[],
+  });
+
+  final FetchStatus status;
+  final List<VideoSample> videos;
+
+  VideoSampleState copyWith({
+    FetchStatus? status,
+    List<VideoSample>? videos,
+  }) {
+    return VideoSampleState(
+      status: status ?? this.status,
+      videos: videos ?? this.videos,
+    );
+  }
+
+  @override
+  String toString() {
+    return '''PostState { status: $status, videos: ${videos.length} }''';
+  }
+
+  @override
+  List<Object> get props => [status, videos];
+}

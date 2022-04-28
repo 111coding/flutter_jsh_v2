@@ -23,7 +23,7 @@ class ExamSampleState extends Equatable {
 
   @override
   String toString() {
-    return '''PostState { status: $status, posts: ${exams.length} }''';
+    return '''PostState { status: $status, exams: ${exams.length} }''';
   }
 
   @override

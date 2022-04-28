@@ -20,7 +20,7 @@ const routesPath = {
   Routes.lectureSchedule: "/lectureSchedule",
   Routes.report: "/report",
   Routes.examSample: "/examSamples",
-  Routes.videoSample: "/videoSampless",
+  Routes.videoSample: "/videoSamples",
   Routes.qna: "/qna",
   Routes.scanner: "/scanner",
 };
