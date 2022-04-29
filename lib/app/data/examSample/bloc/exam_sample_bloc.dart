@@ -2,8 +2,8 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter_jsh_v2/app/core/api/api_connector.dart';
 import 'package:flutter_jsh_v2/app/core/api/fetch_status.dart';
 import 'package:flutter_jsh_v2/app/core/routes/routes.dart';
-import 'package:flutter_jsh_v2/app/data/examSample/bloc%20/exam_sample_event.dart';
-import 'package:flutter_jsh_v2/app/data/examSample/bloc%20/exam_sample_state.dart';
+import 'package:flutter_jsh_v2/app/data/examSample/bloc/exam_sample_event.dart';
+import 'package:flutter_jsh_v2/app/data/examSample/bloc/exam_sample_state.dart';
 import 'package:flutter_jsh_v2/app/data/examSample/model/exam_sample.dart';
 
 class ExamSampleBloc extends Bloc<ExamSampleEvent, ExamSampleState> {
