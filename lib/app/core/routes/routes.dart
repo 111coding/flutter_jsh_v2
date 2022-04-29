@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_jsh_v2/app/ui/page/exam_sample/exam_sample_page.dart';
+import 'package:flutter_jsh_v2/app/ui/page/exam_sample_detail/exam_sample_detail_page.dart';
 import 'package:flutter_jsh_v2/app/ui/page/home/home_page.dart';
 import 'package:flutter_jsh_v2/app/ui/page/lecture_schedule/lecture_schedule_page.dart';
 import 'package:flutter_jsh_v2/app/ui/page/report/report_page.dart';
@@ -10,6 +11,7 @@ enum Routes {
   lectureSchedule,
   report,
   examSample,
+  examSampleDetail,
   videoSample,
   qna, // Android Only
   scanner, // IOS Only
@@ -20,6 +22,7 @@ const routesPath = {
   Routes.lectureSchedule: "/lectureSchedule",
   Routes.report: "/report",
   Routes.examSample: "/examSamples",
+  Routes.examSampleDetail: "/examSampleDetail",
   Routes.videoSample: "/videoSamples",
   Routes.qna: "/qna",
   Routes.scanner: "/scanner",
@@ -30,6 +33,7 @@ final pages = {
   Routes.lectureSchedule.path: (context) => const LectureSchedulePage(),
   Routes.report.path: (context) => const ReportPage(),
   Routes.examSample.path: (context) => const ExamSamplePage(),
+  Routes.examSampleDetail.path: (context) => const ExamSampleDetailPage(),
   Routes.videoSample.path: (context) => const VideoSamplePage(),
 };
 
@@ -51,4 +55,7 @@ extension RoutesExtension on Routes {
 
 extension BuildContextExtension on BuildContext {
   void back() => Navigator.of(this).pop();
+  dynamic arguments() {
+    return ModalRoute.of(this)?.settings.arguments;
+  }
 }

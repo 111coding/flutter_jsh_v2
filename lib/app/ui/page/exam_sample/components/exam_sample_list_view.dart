@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_jsh_v2/app/core/api/fetch_status.dart';
 import 'package:flutter_jsh_v2/app/core/ui/core_ui.dart';
 import 'package:flutter_jsh_v2/app/data/examSample/bloc/exam_sample_bloc.dart';
+import 'package:flutter_jsh_v2/app/ui/page/exam_sample/components/exam_sample_list_view_item.dart';
 
 class ExamSampleListView extends StatelessWidget {
   const ExamSampleListView({Key? key}) : super(key: key);
@@ -26,9 +27,8 @@ class ExamSampleListView extends StatelessWidget {
     final items = bloc.state.exams;
     return ListView.separated(
       itemCount: items.length,
-      itemBuilder: (context, index) {
-        return Text(items[index].title);
-      },
+      padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding, vertical: kVerticalPadding),
+      itemBuilder: (context, index) => ExamSampleListItem(examSample: items[index]),
       separatorBuilder: (context, index) => eHeight(kVerticalPadding),
     );
   }
