@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_jsh_v2/app/ui/componets/back_app_bar.dart';
+import 'package:flutter_jsh_v2/app/ui/componets/title_app_bar.dart';
 import 'package:flutter_jsh_v2/app/ui/page/report/components/report_body.dart';
 
 class ReportPage extends StatelessWidget {
@@ -8,7 +8,7 @@ class ReportPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: BackAppBar(),
+      appBar: TitleAppBar(title: "성적확인"),
       body: const ReportBody(),
     );
   }

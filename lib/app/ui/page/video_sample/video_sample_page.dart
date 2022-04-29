@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_jsh_v2/app/ui/componets/title_app_bar.dart';
 import 'package:flutter_jsh_v2/app/ui/page/video_sample/components/video_sample_body.dart';
 
 class VideoSamplePage extends StatelessWidget {
@@ -7,7 +8,7 @@ class VideoSamplePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: TitleAppBar(title: "강의샘플"),
       body: const VideoSampleBody(),
     );
   }
