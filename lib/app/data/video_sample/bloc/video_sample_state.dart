@@ -6,18 +6,22 @@ class VideoSampleState extends Equatable {
   const VideoSampleState({
     this.status = FetchStatus.initial,
     this.videos = const <VideoSample>[],
+    this.currentVideo,
   });
 
   final FetchStatus status;
   final List<VideoSample> videos;
+  final VideoSample? currentVideo;
 
   VideoSampleState copyWith({
     FetchStatus? status,
     List<VideoSample>? videos,
+    VideoSample? currentVideo,
   }) {
     return VideoSampleState(
       status: status ?? this.status,
       videos: videos ?? this.videos,
+      currentVideo: currentVideo ?? this.currentVideo,
     );
   }
 
@@ -27,5 +31,5 @@ class VideoSampleState extends Equatable {
   }
 
   @override
-  List<Object> get props => [status, videos];
+  List<Object> get props => [status, videos, currentVideo?.idx ?? -1];
 }

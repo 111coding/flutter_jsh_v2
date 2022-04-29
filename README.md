@@ -1,6 +1,9 @@
 # flutter_jsh_v2
 
 ### TODO
+
+- Cross
+    - [ ] 가로전환 막기
 #### Permission
 
 - IOS

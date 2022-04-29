@@ -25,11 +25,25 @@ class VideoSampleListView extends StatelessWidget {
   Widget _listView(VideoSampleBloc bloc) {
     final items = bloc.state.videos;
     return ListView.separated(
+      padding: const EdgeInsets.symmetric(
+        horizontal: kHorizontalPadding,
+        vertical: kVerticalPadding,
+      ),
       itemCount: items.length,
       itemBuilder: (context, index) {
-        return Text(items[index].title);
+        return GestureDetector(
+          onTap: () {
+            bloc.play(items[index]);
+          },
+          child: Text(items[index].title),
+        );
       },
-      separatorBuilder: (context, index) => eHeight(kVerticalPadding),
+      separatorBuilder: (context, index) => Container(
+        margin: const EdgeInsets.symmetric(vertical: 15),
+        width: double.infinity,
+        height: 1,
+        color: ColorPalette.blackO10,
+      ),
     );
   }
 }

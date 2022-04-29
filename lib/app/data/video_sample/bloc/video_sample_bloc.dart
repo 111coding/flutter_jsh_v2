@@ -13,15 +13,30 @@ class VideoSampleBloc extends Bloc<VideoSampleEvent, VideoSampleState> {
     add(VideoSampleFetchEvent());
   }
 
+  void play(VideoSample videoSample) {
+    add(VideoSamplePlayEvent(videoSample: videoSample));
+  }
+
   // =============== event registration ===============
   VideoSampleBloc() : super(const VideoSampleState()) {
     on<VideoSampleFetchEvent>(_fetch);
+    on<VideoSamplePlayEvent>(_play);
   }
 
   Future<void> _fetch(VideoSampleEvent event, Emitter<VideoSampleState> emit) async {
     var resultMap = await _connector.get<List>(Routes.videoSample.path);
     if (resultMap == null) return;
     final videos = resultMap.map((e) => VideoSample.fromJson(e)).toList();
-    emit(state.copyWith(status: FetchStatus.success, videos: videos));
+    emit(state.copyWith(
+      status: FetchStatus.success,
+      videos: videos,
+      currentVideo: videos.isEmpty ? null : videos.first,
+    ));
+  }
+
+  Future<void> _play(VideoSamplePlayEvent event, Emitter<VideoSampleState> emit) async {
+    emit(state.copyWith(
+      currentVideo: event.videoSample,
+    ));
   }
 }
