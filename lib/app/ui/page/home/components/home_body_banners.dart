@@ -4,11 +4,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_jsh_v2/app/core/api/fetch_status.dart';
 import 'package:flutter_jsh_v2/app/data/banner/bloc/main_banner_bloc.dart';
 import 'package:flutter_jsh_v2/app/ui/componets/skeleton_loader.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class HomeBodyBanners extends StatelessWidget {
   const HomeBodyBanners({Key? key}) : super(key: key);
 
-  final ratio = 1 / 1;
+  final ratio = 16 / 9;
 
   @override
   Widget build(BuildContext context) {
@@ -34,11 +35,16 @@ class HomeBodyBanners extends StatelessWidget {
       aspectRatio: ratio,
       child: Swiper(
         itemBuilder: (BuildContext context, int index) {
-          return Container(
-            color: Colors.black,
-            child: Image.network(
-              banners[index].imgUrl,
-              fit: BoxFit.fitWidth,
+          return GestureDetector(
+            onTap: () {
+              launchUrlString(banners[index].href);
+            },
+            child: Container(
+              color: Colors.black,
+              child: Image.network(
+                banners[index].imgUrl,
+                fit: BoxFit.fitWidth,
+              ),
             ),
           );
         },
