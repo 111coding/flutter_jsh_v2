@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_ios_document_scanner/flutter_ios_document_scanner.dart';
 import 'package:flutter_jsh_v2/app/core/api/api_connector.dart';
 import 'package:flutter_jsh_v2/app/core/routes/routes.dart';
 import 'package:flutter_jsh_v2/app/core/ui/core_ui.dart';
@@ -38,7 +39,9 @@ class HomeBody extends StatelessWidget {
               _btn(
                 title: "문서스캔",
                 icon: Icons.qr_code_scanner,
-                onTap: () {},
+                onTap: () {
+                  FlutterIosDocumentScanner.scanDocument();
+                },
               ),
             // TODO Only Android
             if (Platform.isAndroid)
