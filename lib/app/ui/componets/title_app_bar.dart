@@ -9,6 +9,6 @@ class TitleAppBar extends AppBar implements PreferredSizeWidget {
             toolbarHeight: kAppBarHeight,
             title: Text(
               title,
-              style: NotoSansKr.black16B,
+              // style: NotoSansKr.black16B,
             ));
 }

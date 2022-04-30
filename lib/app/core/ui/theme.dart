@@ -8,7 +8,7 @@ import 'package:flutter_jsh_v2/app/core/ui/core_ui.dart';
 ThemeData theme() {
   return ThemeData(
     primaryColor: ColorPalette.appMain,
-    scaffoldBackgroundColor: ColorPalette.bgColor,
+    scaffoldBackgroundColor: ColorPalette.white,
     fontFamily: kDefaultFontFamily,
     appBarTheme: appBarTheme(),
     textTheme: textTheme(),
@@ -19,11 +19,11 @@ ThemeData theme() {
 AppBarTheme appBarTheme() {
   return const AppBarTheme(
     toolbarHeight: kAppBarHeight,
-    color: ColorPalette.white,
+    color: ColorPalette.appMain,
     elevation: 0,
-    iconTheme: IconThemeData(color: ColorPalette.black),
-    titleTextStyle: NotoSansKr.black16B,
-    toolbarTextStyle: NotoSansKr.black16B,
+    iconTheme: IconThemeData(color: ColorPalette.white),
+    titleTextStyle: NotoSansKr.white16B,
+    toolbarTextStyle: NotoSansKr.white16B,
   );
 }
 
