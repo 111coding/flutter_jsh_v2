@@ -29,7 +29,7 @@ class ExamSampleListView extends StatelessWidget {
       itemCount: items.length,
       padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding, vertical: kVerticalPadding),
       itemBuilder: (context, index) => ExamSampleListItem(examSample: items[index]),
-      separatorBuilder: (context, index) => eHeight(kVerticalPadding),
+      separatorBuilder: (context, index) => eHeight(kVerticalPadding / 2),
     );
   }
 }

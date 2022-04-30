@@ -31,27 +31,30 @@ class _ClayButtonState extends State<ClayButton> {
 
   @override
   Widget build(BuildContext context) {
-    return Listener(
-      onPointerDown: (e) {
-        emboss = true;
-      },
-      onPointerUp: (e) {
-        emboss = false;
-      },
-      child: GestureDetector(
-        onTap: widget.onTap,
-        child: ClayAnimatedContainer(
-          color: ColorPalette.bgColor,
-          surfaceColor: ColorPalette.bgColor,
-          depth: 50,
-          borderRadius: 8,
-          spread: 5,
-          emboss: _emboss,
-          // 왕복
-          duration: Duration(milliseconds: delay ~/ 2),
-          height: widget.height,
-          width: widget.width,
-          child: widget.child,
+    return Container(
+      margin: EdgeInsets.all(2),
+      child: Listener(
+        onPointerDown: (e) {
+          emboss = true;
+        },
+        onPointerUp: (e) {
+          emboss = false;
+        },
+        child: GestureDetector(
+          onTap: widget.onTap,
+          child: ClayAnimatedContainer(
+            color: ColorPalette.white,
+            surfaceColor: ColorPalette.white,
+            depth: 50,
+            borderRadius: 8,
+            spread: 2,
+            emboss: _emboss,
+            // 왕복
+            duration: Duration(milliseconds: delay ~/ 2),
+            height: widget.height,
+            width: widget.width,
+            child: widget.child,
+          ),
         ),
       ),
     );

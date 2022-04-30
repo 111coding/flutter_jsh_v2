@@ -25,6 +25,20 @@ class NotoSansKr {
   static const black20B = _NotoSansKrStyle(fontSize: 20, fontWeight: FontWeight.bold, color: ColorPalette.black, height: 24);
   static const black24B = _NotoSansKrStyle(fontSize: 24, fontWeight: FontWeight.bold, color: ColorPalette.black, height: 24);
 
+  static const textMain12R = _NotoSansKrStyle(fontSize: 12, fontWeight: FontWeight.w400, color: ColorPalette.textMain, height: 14.4);
+  static const textMain12M = _NotoSansKrStyle(fontSize: 12, fontWeight: FontWeight.w500, color: ColorPalette.textMain, height: 14.4);
+  static const textMain14R = _NotoSansKrStyle(fontSize: 14, fontWeight: FontWeight.w400, color: ColorPalette.textMain, height: 16.8);
+  static const textMain14M = _NotoSansKrStyle(fontSize: 14, fontWeight: FontWeight.w500, color: ColorPalette.textMain, height: 16.8);
+  static const textMain14B = _NotoSansKrStyle(fontSize: 14, fontWeight: FontWeight.bold, color: ColorPalette.textMain, height: 16.8);
+  static const textMain16Rh22 = _NotoSansKrStyle(fontSize: 16, fontWeight: FontWeight.w400, color: ColorPalette.textMain, height: 22);
+  static const textMain16R = _NotoSansKrStyle(fontSize: 16, fontWeight: FontWeight.w400, color: ColorPalette.textMain, height: 19.2);
+  static const textMain16M = _NotoSansKrStyle(fontSize: 16, fontWeight: FontWeight.w500, color: ColorPalette.textMain, height: 19.2);
+  static const textMain16B = _NotoSansKrStyle(fontSize: 16, fontWeight: FontWeight.bold, color: ColorPalette.textMain, height: 19.2);
+  static const textMain18M = _NotoSansKrStyle(fontSize: 18, fontWeight: FontWeight.w500, color: ColorPalette.textMain, height: 14.4);
+  static const textMain18B = _NotoSansKrStyle(fontSize: 18, fontWeight: FontWeight.bold, color: ColorPalette.textMain, height: 21.6);
+  static const textMain20B = _NotoSansKrStyle(fontSize: 20, fontWeight: FontWeight.bold, color: ColorPalette.textMain, height: 24);
+  static const textMain24B = _NotoSansKrStyle(fontSize: 24, fontWeight: FontWeight.bold, color: ColorPalette.textMain, height: 24);
+
   static const white10R = _NotoSansKrStyle(fontSize: 10, fontWeight: FontWeight.w400, color: ColorPalette.white, height: 12);
   static const white12M = _NotoSansKrStyle(fontSize: 12, fontWeight: FontWeight.w500, color: ColorPalette.white, height: 14.4);
   static const white14M = _NotoSansKrStyle(fontSize: 14, fontWeight: FontWeight.w500, color: ColorPalette.white, height: 17);

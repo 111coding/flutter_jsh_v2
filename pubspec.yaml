@@ -71,6 +71,7 @@ flutter:
 
   assets:
     - assets/
+    - assets/btn/
 
   fonts:
     - family: Noto_Sans_KR
