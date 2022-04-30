@@ -1,8 +1,13 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_jsh_v2/app/core/api/api_connector.dart';
 import 'package:flutter_jsh_v2/app/core/routes/routes.dart';
 import 'package:flutter_jsh_v2/app/core/ui/core_ui.dart';
 import 'package:flutter_jsh_v2/app/ui/componets/clay_button.dart';
 import 'package:flutter_jsh_v2/app/ui/page/home/components/home_sliver_app_bar.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({Key? key}) : super(key: key);
@@ -29,9 +34,20 @@ class HomeBody extends StatelessWidget {
             _btn(title: "문제샘플", icon: Icons.text_snippet, onTap: () => Routes.examSample.push(context)),
             _btn(title: "강의샘플", icon: Icons.video_collection, onTap: () => Routes.videoSample.push(context)),
             // TODO Only IOS
-            _btn(title: "문서스캔", icon: Icons.qr_code_scanner, onTap: () {}),
+            if (Platform.isIOS)
+              _btn(
+                title: "문서스캔",
+                icon: Icons.qr_code_scanner,
+                onTap: () {},
+              ),
             // TODO Only Android
-            _btn(title: "QNA", icon: Icons.question_answer, onTap: () {}),
+            if (Platform.isAndroid)
+              _btn(
+                  title: "QNA",
+                  icon: Icons.question_answer,
+                  onTap: () {
+                    launchUrlString(ApiConnector.cafeUrl);
+                  }),
             eHeight(100),
           ],
         ),
