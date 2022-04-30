@@ -3,7 +3,8 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ApiConnector {
-  static const host = "http://211.54.128.174:8080";
+  static const host = "http://davinci777.com";
+  // static const host = "http://211.54.128.174:8080";
   // static const host = "http://192.168.0.41:8080";
   static const cafeUrl = "https://cafe.daum.net/davinci777";
   static const cafeQnaUrl = "https://cafe.daum.net/davinci777/odWQ";

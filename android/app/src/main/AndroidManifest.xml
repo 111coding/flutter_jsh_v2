@@ -5,7 +5,7 @@
 
    <application
         android:usesCleartextTraffic="true"
-        android:label="flutter_jsh_v2"
+        android:label="정승현 전공물리"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity
