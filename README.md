@@ -19,3 +19,12 @@
 ```
 flutter pub run build_runner watch --delete-conflicting-outputs
 ```
+
+#### Android android/key.properties
+***key파일은 기존 안드로이드 레포지토리 참조!!***
+```
+storePassword=fk
+keyPassword=fk
+keyAlias=key0
+storeFile=jsh_key.jks
+```
