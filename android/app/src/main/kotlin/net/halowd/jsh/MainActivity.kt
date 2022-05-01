@@ -1,4 +1,4 @@
-package com.example.flutter_jsh_v2
+package com.davinci777.jsh
 
 import io.flutter.embedding.android.FlutterActivity
 
